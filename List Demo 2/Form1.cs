@@ -29,8 +29,11 @@ namespace List_Demo_2
             // Has an item been selected from the list?
             if (lbxNewCars.SelectedIndex != -1)
                 // Provide an OK-Cancel dialog to complete the sale
-                if (MessageBox.Show($"Selling {lbxNewCars.SelectedItem}?", "Honda Land Auto",
-                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                if (MessageBox.Show($"Selling {lbxNewCars.SelectedItem}?",
+                    "Honda Auto Land",
+                    MessageBoxButtons.OKCancel,
+                    MessageBoxIcon.Question) == DialogResult.OK)
+
                     // If OK selected, remove the item from the inventory
                     lbxNewCars.Items.RemoveAt(lbxNewCars.SelectedIndex);
         }
